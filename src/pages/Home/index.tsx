@@ -36,6 +36,8 @@ export const ListContainer = styled.View`
   align-items: flex-end;
 `;
 
+export const SafeContainer = styled.SafeAreaView``;
+
 export const CardListContainer = styled.View`
   top: -${RFValue(220)}px;
   width: 100%;
@@ -55,56 +57,58 @@ export function Home() {
   const handleShowBalance = () => setShow(state => !state);
   return (
     <Container>
-      <Header>
-        <InfoView>
-          <InfoWrapper>
-            <Title>Olá, @demo</Title>
-            <BalanceWrapper>
-              <View>
-                <Title>Saldo</Title>
-                {show ? <Title>R$ 5.361,00 </Title> : <HideBalance />}
-              </View>
-              <Icon
-                name={show ? 'eye-off' : 'eye'}
-                onPress={handleShowBalance}
+      <SafeContainer>
+        <Header>
+          <InfoView>
+            <InfoWrapper>
+              <Title>Olá, @demo</Title>
+              <BalanceWrapper>
+                <View>
+                  <Title>Saldo</Title>
+                  {show ? <Title>R$ 5.361,00 </Title> : <HideBalance />}
+                </View>
+                <Icon
+                  name={show ? 'eye-off' : 'eye'}
+                  onPress={handleShowBalance}
+                />
+              </BalanceWrapper>
+            </InfoWrapper>
+            <LogoContainer>
+              <Logo source={logo} />
+            </LogoContainer>
+          </InfoView>
+        </Header>
+        <CardsContainer>
+          <CardListContainer>
+            <HighlightCard />
+            <Row>
+              <ItemCard
+                title="Trans. Máquinas"
+                value="R$ 2.000,00"
+                icon="bar-chart"
               />
-            </BalanceWrapper>
-          </InfoWrapper>
-          <LogoContainer>
-            <Logo source={logo} />
-          </LogoContainer>
-        </InfoView>
-      </Header>
-      <CardsContainer>
-        <CardListContainer>
-          <HighlightCard />
-          <Row>
-            <ItemCard
-              title="Trans. Máquinas"
-              value="R$ 2.000,00"
-              icon="bar-chart"
-            />
-            <MinorCard />
-          </Row>
-          <Row>
-            <ItemCard
-              title="Trans. Máquinas"
-              value="R$ 2.000,00"
-              icon="bar-chart"
-            />
-            <MinorCard />
-          </Row>
-          <ListContainer>
-            <FooterCardsContainer>
-              <FooterCard />
-              <FooterCard />
-              <FooterCard />
-              <FooterCard />
-              <FooterCard />
-            </FooterCardsContainer>
-          </ListContainer>
-        </CardListContainer>
-      </CardsContainer>
+              <MinorCard />
+            </Row>
+            <Row>
+              <ItemCard
+                title="Trans. Máquinas"
+                value="R$ 2.000,00"
+                icon="bar-chart"
+              />
+              <MinorCard />
+            </Row>
+            <ListContainer>
+              <FooterCardsContainer>
+                <FooterCard />
+                <FooterCard />
+                <FooterCard />
+                <FooterCard />
+                <FooterCard />
+              </FooterCardsContainer>
+            </ListContainer>
+          </CardListContainer>
+        </CardsContainer>
+      </SafeContainer>
     </Container>
   );
 }

@@ -1,12 +1,10 @@
 import styled from 'styled-components/native';
-import {getStatusBarHeight} from 'react-native-iphone-x-helper';
-import {RFPercentage, RFValue} from 'react-native-responsive-fontsize';
+import {RFValue} from 'react-native-responsive-fontsize';
 import Feather from 'react-native-vector-icons/Feather';
-import {Platform, StatusBar} from 'react-native';
 
-export const Container = styled.SafeAreaView`
+export const Container = styled.View`
   flex: 1;
-  background-color: ${({theme}) => theme.colors.background};
+  background-color: ${({theme}) => theme.colors.primary};
 `;
 
 export const Header = styled.View`
