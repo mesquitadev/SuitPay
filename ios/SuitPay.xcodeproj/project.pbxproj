@@ -11,17 +11,17 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		30BC23C715B84B19A680FE64 /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */; };
 		6172F2D35A4C3AA820D92908 /* libPods-SuitPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-SuitPay.a */; };
+		78D77AE3E65B4C6CBF1AE84C /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B200FF89071848F0990781D6 /* Sora-Light.ttf */; };
 		7EF68E3733C33B6898317E18 /* libPods-SuitPay-SuitPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-SuitPay-SuitPayTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E35F3A6C89D04D7088EC2BBC /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */; };
-		30BC23C715B84B19A680FE64 /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */; };
-		FB0D5EF762154709944581C0 /* Sora-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E3EDA5FD0404912AB853031 /* Sora-ExtraLight.ttf */; };
-		78D77AE3E65B4C6CBF1AE84C /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B200FF89071848F0990781D6 /* Sora-Light.ttf */; };
-		CE2B1FA32E0F4B708C82A23A /* Sora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */; };
-		F807762518A84E43B137E1B8 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */; };
 		CA6C41E7FFB0402A9BC9C84E /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */; };
+		CE2B1FA32E0F4B708C82A23A /* Sora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */; };
+		E35F3A6C89D04D7088EC2BBC /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */; };
 		E6B80D214FF94A77B62CF19F /* Sora-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */; };
+		F807762518A84E43B137E1B8 /* Sora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */; };
+		FB0D5EF762154709944581C0 /* Sora-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E3EDA5FD0404912AB853031 /* Sora-ExtraLight.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,28 +38,28 @@
 		00E356EE1AD99517003FC87E /* SuitPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuitPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SuitPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuitPayTests.m; sourceTree = "<group>"; };
+		0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-SemiBold.ttf"; path = "../assets/fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SuitPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuitPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SuitPay/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SuitPay/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SuitPay/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SuitPay/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SuitPay/main.m; sourceTree = "<group>"; };
+		1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Bold.ttf"; path = "../assets/fonts/Sora-Bold.ttf"; sourceTree = "<group>"; };
 		1D0AE47A65C8663E3B452821 /* Pods-SuitPay-SuitPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay-SuitPayTests.release.xcconfig"; path = "Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests.release.xcconfig"; sourceTree = "<group>"; };
+		5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Thin.ttf"; path = "../assets/fonts/Sora-Thin.ttf"; sourceTree = "<group>"; };
 		6423831EA8574132BED9D8CC /* libPods-SuitPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuitPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C97AB639B58BBB4B15BBE30 /* Pods-SuitPay-SuitPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay-SuitPayTests.debug.xcconfig"; path = "Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Medium.ttf"; path = "../assets/fonts/Sora-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SuitPay/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E3EDA5FD0404912AB853031 /* Sora-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-ExtraLight.ttf"; path = "../assets/fonts/Sora-ExtraLight.ttf"; sourceTree = "<group>"; };
 		ABFE59519B596E51CEFDCCC0 /* libPods-SuitPay-SuitPayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuitPay-SuitPayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B200FF89071848F0990781D6 /* Sora-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Light.ttf"; path = "../assets/fonts/Sora-Light.ttf"; sourceTree = "<group>"; };
+		BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Regular.ttf"; path = "../assets/fonts/Sora-Regular.ttf"; sourceTree = "<group>"; };
 		C0A881CF5CF3F2B244570E2A /* Pods-SuitPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay.debug.xcconfig"; path = "Target Support Files/Pods-SuitPay/Pods-SuitPay.debug.xcconfig"; sourceTree = "<group>"; };
+		C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-ExtraBold.ttf"; path = "../assets/fonts/Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-SuitPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay.release.xcconfig"; path = "Target Support Files/Pods-SuitPay/Pods-SuitPay.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */ = {isa = PBXFileReference; name = "Sora-Bold.ttf"; path = "../assets/fonts/Sora-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; name = "Sora-ExtraBold.ttf"; path = "../assets/fonts/Sora-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		9E3EDA5FD0404912AB853031 /* Sora-ExtraLight.ttf */ = {isa = PBXFileReference; name = "Sora-ExtraLight.ttf"; path = "../assets/fonts/Sora-ExtraLight.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B200FF89071848F0990781D6 /* Sora-Light.ttf */ = {isa = PBXFileReference; name = "Sora-Light.ttf"; path = "../assets/fonts/Sora-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */ = {isa = PBXFileReference; name = "Sora-Medium.ttf"; path = "../assets/fonts/Sora-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */ = {isa = PBXFileReference; name = "Sora-Regular.ttf"; path = "../assets/fonts/Sora-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; name = "Sora-SemiBold.ttf"; path = "../assets/fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */ = {isa = PBXFileReference; name = "Sora-Thin.ttf"; path = "../assets/fonts/Sora-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,19 +154,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C0A881CF5CF3F2B244570E2A /* Pods-SuitPay.debug.xcconfig */,
-				D00AAFFCFCFDA5787532823F /* Pods-SuitPay.release.xcconfig */,
-				6C97AB639B58BBB4B15BBE30 /* Pods-SuitPay-SuitPayTests.debug.xcconfig */,
-				1D0AE47A65C8663E3B452821 /* Pods-SuitPay-SuitPayTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		C7FAF8A4A8A94C689C637383 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */,
 				C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */,
@@ -178,8 +167,19 @@
 				5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
 			path = "";
+			sourceTree = "<group>";
+		};
+		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0A881CF5CF3F2B244570E2A /* Pods-SuitPay.debug.xcconfig */,
+				D00AAFFCFCFDA5787532823F /* Pods-SuitPay.release.xcconfig */,
+				6C97AB639B58BBB4B15BBE30 /* Pods-SuitPay-SuitPayTests.debug.xcconfig */,
+				1D0AE47A65C8663E3B452821 /* Pods-SuitPay-SuitPayTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
