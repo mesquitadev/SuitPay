@@ -11,12 +11,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <View
         style={{
-          backgroundColor: theme.colors.primary,
           flex: 1,
-          height: '100%',
         }}>
         <NavigationContainer>
-          <StatusBar barStyle="light-content" />
+          <StatusBar
+            barStyle="light-content"
+            backgroundColor={theme.colors.primary}
+          />
           <Routes />
         </NavigationContainer>
       </View>
