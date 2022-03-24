@@ -1,13 +1,20 @@
 import React from 'react';
-
+import {ActivityIndicator, View} from 'react-native';
+import {useAuth} from '@hooks/auth';
+import PublicRoutes from './PublicRoutes';
 import AuthRoutes from './AuthRoutes';
-import AppRoutes from './AppRoutes';
 
 function Routes() {
-  const signed = true;
-  const loading = false;
+  const {user, loading} = useAuth();
 
-  return signed ? <AppRoutes /> : <AuthRoutes />;
+  if (loading) {
+    return (
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <ActivityIndicator size="large" color="#999" />
+      </View>
+    );
+  }
+  return user ? <AuthRoutes /> : <PublicRoutes />;
 }
 
 export default Routes;

@@ -12,10 +12,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		30BC23C715B84B19A680FE64 /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */; };
-		6172F2D35A4C3AA820D92908 /* libPods-SuitPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-SuitPay.a */; };
+		4F86F272B979E186E84A6904 /* libPods-SuitPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 702DD4D945F8AE3D269D9DE2 /* libPods-SuitPay.a */; };
 		78D77AE3E65B4C6CBF1AE84C /* Sora-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B200FF89071848F0990781D6 /* Sora-Light.ttf */; };
-		7EF68E3733C33B6898317E18 /* libPods-SuitPay-SuitPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-SuitPay-SuitPayTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B076F690A372D4254A61C953 /* libPods-SuitPay-SuitPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0B926E5589749A0F04C850 /* libPods-SuitPay-SuitPayTests.a */; };
+		C465E6F20C944220950688EE /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 07A7DDF7E78B4B7280498DC0 /* icomoon.ttf */; };
 		CA6C41E7FFB0402A9BC9C84E /* Sora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */; };
 		CE2B1FA32E0F4B708C82A23A /* Sora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */; };
 		E35F3A6C89D04D7088EC2BBC /* Sora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */; };
@@ -38,27 +39,28 @@
 		00E356EE1AD99517003FC87E /* SuitPayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuitPayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SuitPayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuitPayTests.m; sourceTree = "<group>"; };
-		0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-SemiBold.ttf"; path = "../assets/fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; };
+		07A7DDF7E78B4B7280498DC0 /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = ../assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
+		0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-SemiBold.ttf"; path = "../assets/fonts/Sora-SemiBold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SuitPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuitPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SuitPay/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SuitPay/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SuitPay/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SuitPay/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SuitPay/main.m; sourceTree = "<group>"; };
-		1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Bold.ttf"; path = "../assets/fonts/Sora-Bold.ttf"; sourceTree = "<group>"; };
-		1D0AE47A65C8663E3B452821 /* Pods-SuitPay-SuitPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay-SuitPayTests.release.xcconfig"; path = "Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests.release.xcconfig"; sourceTree = "<group>"; };
-		5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Thin.ttf"; path = "../assets/fonts/Sora-Thin.ttf"; sourceTree = "<group>"; };
-		6423831EA8574132BED9D8CC /* libPods-SuitPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuitPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C97AB639B58BBB4B15BBE30 /* Pods-SuitPay-SuitPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay-SuitPayTests.debug.xcconfig"; path = "Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Medium.ttf"; path = "../assets/fonts/Sora-Medium.ttf"; sourceTree = "<group>"; };
+		1C259977B5974FA69FAFD663 /* Sora-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Bold.ttf"; path = "../assets/fonts/Sora-Bold.ttf"; sourceTree = "<group>"; };
+		2D0B926E5589749A0F04C850 /* libPods-SuitPay-SuitPayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuitPay-SuitPayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F30173B093E0D1326DE462A /* Pods-SuitPay-SuitPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay-SuitPayTests.debug.xcconfig"; path = "Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Thin.ttf"; path = "../assets/fonts/Sora-Thin.ttf"; sourceTree = "<group>"; };
+		702DD4D945F8AE3D269D9DE2 /* libPods-SuitPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuitPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A04E58952B640A2BEC29D77 /* Sora-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Medium.ttf"; path = "../assets/fonts/Sora-Medium.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SuitPay/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9E3EDA5FD0404912AB853031 /* Sora-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-ExtraLight.ttf"; path = "../assets/fonts/Sora-ExtraLight.ttf"; sourceTree = "<group>"; };
-		ABFE59519B596E51CEFDCCC0 /* libPods-SuitPay-SuitPayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuitPay-SuitPayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B200FF89071848F0990781D6 /* Sora-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Light.ttf"; path = "../assets/fonts/Sora-Light.ttf"; sourceTree = "<group>"; };
-		BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Regular.ttf"; path = "../assets/fonts/Sora-Regular.ttf"; sourceTree = "<group>"; };
-		C0A881CF5CF3F2B244570E2A /* Pods-SuitPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay.debug.xcconfig"; path = "Target Support Files/Pods-SuitPay/Pods-SuitPay.debug.xcconfig"; sourceTree = "<group>"; };
-		C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-ExtraBold.ttf"; path = "../assets/fonts/Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
-		D00AAFFCFCFDA5787532823F /* Pods-SuitPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay.release.xcconfig"; path = "Target Support Files/Pods-SuitPay/Pods-SuitPay.release.xcconfig"; sourceTree = "<group>"; };
+		88F5A89FCBFB7AD670594E0B /* Pods-SuitPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay.debug.xcconfig"; path = "Target Support Files/Pods-SuitPay/Pods-SuitPay.debug.xcconfig"; sourceTree = "<group>"; };
+		8EB5A0A834FD69C34CE4E23C /* Pods-SuitPay-SuitPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay-SuitPayTests.release.xcconfig"; path = "Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests.release.xcconfig"; sourceTree = "<group>"; };
+		936838059E9C000F25AA8954 /* Pods-SuitPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuitPay.release.xcconfig"; path = "Target Support Files/Pods-SuitPay/Pods-SuitPay.release.xcconfig"; sourceTree = "<group>"; };
+		9E3EDA5FD0404912AB853031 /* Sora-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-ExtraLight.ttf"; path = "../assets/fonts/Sora-ExtraLight.ttf"; sourceTree = "<group>"; };
+		B200FF89071848F0990781D6 /* Sora-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Light.ttf"; path = "../assets/fonts/Sora-Light.ttf"; sourceTree = "<group>"; };
+		BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-Regular.ttf"; path = "../assets/fonts/Sora-Regular.ttf"; sourceTree = "<group>"; };
+		C7A11DFC2FEC4D2982B2AA58 /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sora-ExtraBold.ttf"; path = "../assets/fonts/Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -67,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF68E3733C33B6898317E18 /* libPods-SuitPay-SuitPayTests.a in Frameworks */,
+				B076F690A372D4254A61C953 /* libPods-SuitPay-SuitPayTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6172F2D35A4C3AA820D92908 /* libPods-SuitPay.a in Frameworks */,
+				4F86F272B979E186E84A6904 /* libPods-SuitPay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6423831EA8574132BED9D8CC /* libPods-SuitPay.a */,
-				ABFE59519B596E51CEFDCCC0 /* libPods-SuitPay-SuitPayTests.a */,
+				702DD4D945F8AE3D269D9DE2 /* libPods-SuitPay.a */,
+				2D0B926E5589749A0F04C850 /* libPods-SuitPay-SuitPayTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,18 +167,18 @@
 				BF0FBC1CC9AF430BA7CEBC8D /* Sora-Regular.ttf */,
 				0D78D46649FF418485CA4AAA /* Sora-SemiBold.ttf */,
 				5077B550C6164E24A6F66A8E /* Sora-Thin.ttf */,
+				07A7DDF7E78B4B7280498DC0 /* icomoon.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0A881CF5CF3F2B244570E2A /* Pods-SuitPay.debug.xcconfig */,
-				D00AAFFCFCFDA5787532823F /* Pods-SuitPay.release.xcconfig */,
-				6C97AB639B58BBB4B15BBE30 /* Pods-SuitPay-SuitPayTests.debug.xcconfig */,
-				1D0AE47A65C8663E3B452821 /* Pods-SuitPay-SuitPayTests.release.xcconfig */,
+				88F5A89FCBFB7AD670594E0B /* Pods-SuitPay.debug.xcconfig */,
+				936838059E9C000F25AA8954 /* Pods-SuitPay.release.xcconfig */,
+				2F30173B093E0D1326DE462A /* Pods-SuitPay-SuitPayTests.debug.xcconfig */,
+				8EB5A0A834FD69C34CE4E23C /* Pods-SuitPay-SuitPayTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -188,12 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SuitPayTests" */;
 			buildPhases = (
-				A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */,
+				6232E62098473F5C83D35443 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */,
-				4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */,
+				484D8758F8E52BC8D0E014E1 /* [CP] Embed Pods Frameworks */,
+				5B3209276A557142DFF7934B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,14 +211,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SuitPay" */;
 			buildPhases = (
-				3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */,
+				4B0931872B2B2482DDF976BA /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
-				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
+				1F430B46FC59EBFEB245AAE6 /* [CP] Embed Pods Frameworks */,
+				94F0ED5FFE1FDB4E3BD62EDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,6 +287,7 @@
 				F807762518A84E43B137E1B8 /* Sora-Regular.ttf in Resources */,
 				CA6C41E7FFB0402A9BC9C84E /* Sora-SemiBold.ttf in Resources */,
 				E6B80D214FF94A77B62CF19F /* Sora-Thin.ttf in Resources */,
+				C465E6F20C944220950688EE /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,9 +306,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n../node_modules/react-native-vector-image/strip_svgs.sh\n";
 		};
-		077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */ = {
+		1F430B46FC59EBFEB245AAE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		484D8758F8E52BC8D0E014E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,7 +342,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */ = {
+		4B0931872B2B2482DDF976BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,7 +364,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */ = {
+		5B3209276A557142DFF7934B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +381,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitPay-SuitPayTests/Pods-SuitPay-SuitPayTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */ = {
+		6232E62098473F5C83D35443 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -383,7 +403,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */ = {
+		94F0ED5FFE1FDB4E3BD62EDA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,23 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuitPay/Pods-SuitPay-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -469,9 +472,9 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C97AB639B58BBB4B15BBE30 /* Pods-SuitPay-SuitPayTests.debug.xcconfig */;
+			baseConfigurationReference = 2F30173B093E0D1326DE462A /* Pods-SuitPay-SuitPayTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -497,9 +500,9 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0AE47A65C8663E3B452821 /* Pods-SuitPay-SuitPayTests.release.xcconfig */;
+			baseConfigurationReference = 8EB5A0A834FD69C34CE4E23C /* Pods-SuitPay-SuitPayTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = SuitPayTests/Info.plist;
@@ -522,8 +525,9 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0A881CF5CF3F2B244570E2A /* Pods-SuitPay.debug.xcconfig */;
+			baseConfigurationReference = 88F5A89FCBFB7AD670594E0B /* Pods-SuitPay.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -548,8 +552,9 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D00AAFFCFCFDA5787532823F /* Pods-SuitPay.release.xcconfig */;
+			baseConfigurationReference = 936838059E9C000F25AA8954 /* Pods-SuitPay.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;

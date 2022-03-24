@@ -1,44 +1,118 @@
-import React, {useState} from 'react';
-import {StatusBar} from 'react-native';
-import logoMenu from '@assets/images/logo-variant-1.png';
+import React, {useEffect, useState} from 'react';
+import {View} from 'react-native';
+import styled from 'styled-components/native';
+import {RFValue} from 'react-native-responsive-fontsize';
+import {useAuth} from '@hooks/auth';
+import HighlightCard from './components/HighlightCard';
+
 import {
-  ContainerFull,
-  Gradient,
-  LogoContainer,
+  BalanceWrapper,
+  Container,
+  Header,
+  HideBalance,
+  Icon,
+  InfoView,
+  InfoWrapper,
   Logo,
-  ButtonsContainer,
-  SignUpButton,
-  SignInButton,
-  TextButton,
+  LogoContainer,
+  Title,
+  CardsContainer,
 } from './styles';
 
-function Home() {
-  const images = [
-    require('@assets/images/bg-home.png'),
-    require('@assets/images/bg-home-2.png'),
-    require('@assets/images/bg-home-3.png'),
-  ];
+import logo from '../../assets/images/logo.png';
+import ItemCard from './components/ItemCard';
+import MinorCard from './components/MinorCard';
+import FooterCard from './components/FooterCard';
 
-  const [currentImage] = useState(
-    images[Math.floor(Math.random() * images.length)],
-  );
+export const FooterCardsContainer = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  scrollEventThrottle: 200,
+  decelerationRate: 'fast',
+})``;
+
+export const ListContainer = styled.View`
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+`;
+
+export const SafeContainer = styled.SafeAreaView``;
+
+export const CardListContainer = styled.View`
+  top: -${RFValue(220)}px;
+  width: 100%;
+  justify-content: center;
+  padding: ${RFValue(20)}px;
+`;
+
+export const Row = styled.View`
+  margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export function Home() {
+  const {user} = useAuth();
+  const [show, setShow] = useState(false);
+  const handleShowBalance = () => setShow(state => !state);
+
   return (
-    <ContainerFull source={currentImage}>
-      <Gradient colors={['rgba(255, 255, 255, 0.10)', 'rgba(0,0,0, 0.30)']}>
-        <StatusBar barStyle="dark-content" />
-        <LogoContainer>
-          <Logo source={logoMenu} />
-        </LogoContainer>
-        <ButtonsContainer>
-          <SignUpButton>
-            <TextButton>Entrar</TextButton>
-          </SignUpButton>
-          <SignInButton>
-            <TextButton>Cadastrar</TextButton>
-          </SignInButton>
-        </ButtonsContainer>
-      </Gradient>
-    </ContainerFull>
+    <Container>
+      <SafeContainer>
+        <Header>
+          <InfoView>
+            <InfoWrapper>
+              <Title>Olá, {user && `@${user.username}`}</Title>
+              <BalanceWrapper>
+                <View>
+                  <Title>Saldo</Title>
+                  {show ? <Title>R$ 5.361,00 </Title> : <HideBalance />}
+                </View>
+                <Icon
+                  name={show ? 'eye-off' : 'eye'}
+                  onPress={handleShowBalance}
+                />
+              </BalanceWrapper>
+            </InfoWrapper>
+            <LogoContainer>
+              <Logo source={logo} />
+            </LogoContainer>
+          </InfoView>
+        </Header>
+        <CardsContainer>
+          <CardListContainer>
+            <HighlightCard />
+            <Row>
+              <ItemCard
+                title="Trans. Máquinas"
+                value="R$ 2.000,00"
+                icon="bar-chart"
+              />
+              <MinorCard />
+            </Row>
+            <Row>
+              <ItemCard
+                title="Trans. Máquinas"
+                value="R$ 2.000,00"
+                icon="bar-chart"
+              />
+              <MinorCard />
+            </Row>
+            <ListContainer>
+              <FooterCardsContainer>
+                <FooterCard />
+                <FooterCard />
+                <FooterCard />
+                <FooterCard />
+                <FooterCard />
+              </FooterCardsContainer>
+            </ListContainer>
+          </CardListContainer>
+        </CardsContainer>
+      </SafeContainer>
+    </Container>
   );
 }
 
