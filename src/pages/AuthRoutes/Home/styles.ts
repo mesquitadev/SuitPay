@@ -11,7 +11,7 @@ export const Header = styled.View`
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 30px;
-  height: ${RFValue(370)}px;
+  height: ${RFValue(350)}px;
   background-color: ${({theme}) => theme.colors.primary};
 `;
 
@@ -21,6 +21,7 @@ export const InfoView = styled.View`
 `;
 
 export const InfoWrapper = styled.View`
+  align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
 `;
@@ -34,8 +35,22 @@ export const BalanceWrapper = styled.View`
 export const HideBalance = styled.View`
   width: ${RFValue(90)}px;
   height: ${RFValue(20)}px;
-  background-color: ${({theme}) => theme.colors.text};
+  margin-right: 5px;
+  background-color: ${({theme}) => theme.colors.text[100]};
 `;
+
+export const AtTitle = styled.Text`
+  color: ${({theme}) => theme.colors.secondary}
+  font-size: ${RFValue(18)}px;
+  font-family: ${({theme}) => theme.fonts.semiBold};
+`;
+
+export const BalanceTitle = styled.Text`
+  color: ${({theme}) => theme.colors.secondary};
+  font-family: ${({theme}) => theme.fonts.bold};
+  font-size: ${RFValue(14)}px;
+`;
+
 export const Title = styled.Text`
   color: white;
   font-family: ${({theme}) => theme.fonts.bold};
@@ -57,4 +72,5 @@ export const Icon = styled(Feather)`
 
 export const CardsContainer = styled.View`
   position: relative;
+  background-color: ${({theme}) => theme.colors.background};
 `;

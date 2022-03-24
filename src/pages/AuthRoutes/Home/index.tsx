@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import styled from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {useAuth} from '@hooks/auth';
+import logo from '@assets/images/logo.png';
 import HighlightCard from './components/HighlightCard';
 
 import {
@@ -17,9 +18,10 @@ import {
   LogoContainer,
   Title,
   CardsContainer,
+  BalanceTitle,
+  AtTitle,
 } from './styles';
 
-import logo from '../../assets/images/logo.png';
 import ItemCard from './components/ItemCard';
 import MinorCard from './components/MinorCard';
 import FooterCard from './components/FooterCard';
@@ -64,10 +66,13 @@ export function Home() {
         <Header>
           <InfoView>
             <InfoWrapper>
-              <Title>Olá, {user && `@${user.username}`}</Title>
+              <Title>
+                Olá, <AtTitle>@</AtTitle>
+                {user && user.username}
+              </Title>
               <BalanceWrapper>
                 <View>
-                  <Title>Saldo</Title>
+                  <BalanceTitle>Saldo</BalanceTitle>
                   {show ? <Title>R$ 5.361,00 </Title> : <HideBalance />}
                 </View>
                 <Icon
@@ -88,27 +93,23 @@ export function Home() {
               <ItemCard
                 title="Trans. Máquinas"
                 value="R$ 2.000,00"
-                icon="bar-chart"
+                icon="graph"
               />
-              <MinorCard />
+              <MinorCard title="Receber PIX" icon="qr-code" />
             </Row>
             <Row>
               <ItemCard
-                title="Trans. Máquinas"
-                value="R$ 2.000,00"
-                icon="bar-chart"
+                title="Trans. Online"
+                value="R$ 192,00"
+                icon="shopping-cart"
               />
-              <MinorCard />
+              <MinorCard icon="link" title="Receber Link" />
             </Row>
-            <ListContainer>
-              <FooterCardsContainer>
-                <FooterCard />
-                <FooterCard />
-                <FooterCard />
-                <FooterCard />
-                <FooterCard />
-              </FooterCardsContainer>
-            </ListContainer>
+            <FooterCardsContainer>
+              <FooterCard iconName="pix" text="PIX" />
+              <FooterCard iconName="ted" text="TED" />
+              <FooterCard iconName="boleto" text="Pagamento Boleto" />
+            </FooterCardsContainer>
           </CardListContainer>
         </CardsContainer>
       </SafeContainer>
