@@ -15,6 +15,7 @@ import {
   Container,
   Fields,
   Form,
+  Gradient,
   Header,
   LinksContainer,
   Logo,
@@ -69,59 +70,57 @@ export default function SignIn() {
         barStyle="light-content"
         backgroundColor={theme.colors.primary}
       />
-      <Container>
-        <Header>
-          <Logo />
-        </Header>
-        <Form>
-          <Title>Login</Title>
-          <Fields>
-            <InputForm
-              name="username"
-              icon="at-sign"
-              control={control}
-              placeholder="Usuário"
-              autoCapitalize="none"
-              autoCorrect={false}
-              returnKeyType="next"
-              onSubmitEditing={() => {
-                passwordRef.current?.focus();
-              }}
-              error={errors.username && errors.username.message}
-            />
+      <Gradient>
+        <Container>
+          <Form>
+            <Fields>
+              <InputForm
+                name="username"
+                icon="at-sign"
+                control={control}
+                placeholder="Usuário"
+                autoCapitalize="none"
+                autoCorrect={false}
+                returnKeyType="next"
+                onSubmitEditing={() => {
+                  passwordRef.current?.focus();
+                }}
+                error={errors.username && errors.username.message}
+              />
 
-            <InputForm
-              ref={passwordRef}
-              name="password"
-              icon="key"
-              control={control}
-              secureTextEntry
-              textContentType="password"
-              placeholder="Senha"
-              autoCapitalize="none"
-              returnKeyLabel="Entrar"
-              returnKeyType="send"
-              onSubmitEditing={handleSubmit(handleLogin)}
-              error={errors.password && errors.password.message}
-            />
-            <LinksContainer>
-              <ButtonLink
-                title="Esqueci minha senha"
-                onPress={() => {
-                  navigation.navigate('ForgotPassword');
-                }}
+              <InputForm
+                ref={passwordRef}
+                name="password"
+                icon="key"
+                control={control}
+                secureTextEntry
+                textContentType="password"
+                placeholder="Senha"
+                autoCapitalize="none"
+                returnKeyLabel="Entrar"
+                returnKeyType="send"
+                onSubmitEditing={handleSubmit(handleLogin)}
+                error={errors.password && errors.password.message}
               />
-              <ButtonLink
-                title="Cadastrar"
-                onPress={() => {
-                  navigation.navigate('SignUp');
-                }}
-              />
-            </LinksContainer>
-            <Button title="Entrar" onPress={handleSubmit(handleLogin)} />
-          </Fields>
-        </Form>
-      </Container>
+              <LinksContainer>
+                <ButtonLink
+                  title="Esqueci minha senha"
+                  onPress={() => {
+                    navigation.navigate('ForgotPassword');
+                  }}
+                />
+                <ButtonLink
+                  title="Cadastrar"
+                  onPress={() => {
+                    navigation.navigate('SignUp');
+                  }}
+                />
+              </LinksContainer>
+              <Button title="Entrar" onPress={handleSubmit(handleLogin)} />
+            </Fields>
+          </Form>
+        </Container>
+      </Gradient>
     </>
   );
 }

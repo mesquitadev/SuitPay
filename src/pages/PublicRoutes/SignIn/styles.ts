@@ -2,16 +2,21 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import logoBlank from '@assets/images/logo-menu.png';
 import {RectButton} from 'react-native-gesture-handler';
-import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 import {Platform} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
+import theme from '@globals/styles/theme';
 
 export const Container = styled.KeyboardAvoidingView.attrs({
   enabled: Platform.OS === 'ios',
   behavior: 'position',
   keyboardVerticalOffset: -120,
+})``;
+
+export const Gradient = styled(LinearGradient).attrs({
+  locations: [0, 0.5, 0.6],
+  colors: ['#4c669f', '#3b5998', '#192f6a'],
 })`
   flex: 1;
-  background-color: ${({theme}) => theme.colors.background};
 `;
 
 export const Header = styled.View`
