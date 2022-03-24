@@ -83,8 +83,6 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
-
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -98,7 +96,7 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = true
+def enableProguardInReleaseBuilds = false
 
 /**
  * The preferred build flavor of JavaScriptCore.
@@ -148,21 +146,13 @@ android {
         }
     }
     signingConfigs {
-            debug {
-                storeFile file('debug.keystore')
-                storePassword 'android'
-                keyAlias 'androiddebugkey'
-                keyPassword 'android'
-            }
-            release {
-                if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-                    storeFile file(MYAPP_RELEASE_STORE_FILE)
-                    storePassword MYAPP_RELEASE_STORE_PASSWORD
-                    keyAlias MYAPP_RELEASE_KEY_ALIAS
-                    keyPassword MYAPP_RELEASE_KEY_PASSWORD
-                }
-            }
+        debug {
+            storeFile file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
         }
+    }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
@@ -234,10 +224,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-project.ext.react = [
-    enableHermes: false,  // clean and rebuild if changing
-]
-
-apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/react-native-vector-image/strip_svgs.gradle"
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
