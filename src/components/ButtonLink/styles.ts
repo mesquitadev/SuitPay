@@ -7,6 +7,6 @@ export const Container = styled(RectButton)``;
 export const Title = styled.Text`
   font-family: ${({theme}) => theme.fonts.regular};
   font-size: ${RFValue(13)}px;
-  color: ${({theme}) => theme.colors.text[100]};
+  color: ${({theme}) => theme.colors.gray[100]};
   margin: 5px 0;
 `;

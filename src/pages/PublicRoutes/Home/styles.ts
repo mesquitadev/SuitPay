@@ -8,7 +8,7 @@ export const ContainerFull = styled.ImageBackground`
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({theme}) => theme.colors.background};
+  background-color: ${({theme}) => theme.colors.gray[40]};
 `;
 
 export const Gradient = styled(LinearGradient).attrs({
@@ -54,7 +54,7 @@ export const SignUpButton = styled.TouchableOpacity<ButtonProps>`
 `;
 
 export const TextButton = styled.Text<ButtonProps>`
-  color: ${({theme}) => theme.colors.background};
+  color: ${({theme}) => theme.colors.gray[40]};
   font-family: ${({theme}) => theme.fonts.bold};
 `;
 

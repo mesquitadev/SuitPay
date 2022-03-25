@@ -13,7 +13,7 @@ function ItemCard({title, icon, value}: ItemCardProps) {
   return (
     <Container
       style={{
-        shadowColor: theme.colors.text[200],
+        shadowColor: theme.colors.gray[90],
         shadowOffset: {
           width: 3,
           height: 3,

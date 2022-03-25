@@ -5,7 +5,7 @@ import {Platform} from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({theme}) => theme.colors.background};
+  background-color: ${({theme}) => theme.colors.gray[40]};
 `;
 
 export const Header = styled.View`
@@ -22,7 +22,7 @@ export const Header = styled.View`
 
 export const Paragraph = styled.Text`
   font-family: ${({theme}) => theme.fonts.regular};
-  color: ${({theme}) => theme.colors.background_2};
+  color: ${({theme}) => theme.colors.white[100]};
   font-size: ${RFValue(18)}px;
 `;
 

@@ -3,7 +3,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import {PIcon} from '@components/index';
 
 export const Container = styled.View`
-  background-color: ${({theme}) => theme.colors.background_2};
+  background-color: ${({theme}) => theme.colors.white[100]};
   height: ${RFValue(85)}px;
   width: ${RFValue(200)}px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
@@ -15,7 +15,7 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: 18px;
-  color: ${({theme}) => theme.colors.text[100]};
+  color: ${({theme}) => theme.colors.gray[100]};
   font-family: ${({theme}) => theme.fonts.semiBold};
 `;
 

@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {PIcon} from '@components/index';
 
 export const Container = styled.View`
-  background-color: ${({theme}) => theme.colors.background_2};
+  background-color: ${({theme}) => theme.colors.white[100]};
   height: ${RFValue(115)}px;
   width: ${RFValue(115)}px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);

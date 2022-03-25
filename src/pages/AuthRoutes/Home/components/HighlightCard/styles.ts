@@ -4,7 +4,7 @@ import Feather from 'react-native-vector-icons/AntDesign';
 import {PIcon} from '@components/index';
 
 export const Container = styled.View`
-  background-color: ${({theme}) => theme.colors.background_2};
+  background-color: ${({theme}) => theme.colors.white[100]};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: ${RFValue(10)}px;
@@ -19,19 +19,19 @@ export const Header = styled.View`
 `;
 
 export const Title = styled.Text`
-  color: ${({theme}) => theme.colors.text[200]}
+  color: ${({theme}) => theme.colors.gray[90]}
   font-size: ${RFValue(12)}px;
   font-family: ${({theme}) => theme.fonts.semiBold};
 `;
 
 export const ButtonTitle = styled.Text`
-  color: ${({theme}) => theme.colors.text[90]}
+  color: ${({theme}) => theme.colors.white[100]}
   font-size: ${RFValue(13)}px;
   font-family: ${({theme}) => theme.fonts.semiBold};
 `;
 
 export const SubTitle = styled.Text`
-  color: ${({theme}) => theme.colors.text[100]}
+  color: ${({theme}) => theme.colors.gray[100]}
   font-size: ${RFValue(14)}px;
   font-family: ${({theme}) => theme.fonts.semiBold};
 `;

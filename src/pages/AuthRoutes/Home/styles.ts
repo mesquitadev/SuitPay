@@ -36,7 +36,7 @@ export const HideBalance = styled.View`
   width: ${RFValue(90)}px;
   height: ${RFValue(20)}px;
   margin-right: 5px;
-  background-color: ${({theme}) => theme.colors.text[100]};
+  background-color: ${({theme}) => theme.colors.gray[100]};
 `;
 
 export const AtTitle = styled.Text`
@@ -72,5 +72,5 @@ export const Icon = styled(Feather)`
 
 export const CardsContainer = styled.View`
   position: relative;
-  background-color: ${({theme}) => theme.colors.background};
+  background-color: ${({theme}) => theme.colors.gray[40]};
 `;

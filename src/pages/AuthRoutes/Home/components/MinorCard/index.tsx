@@ -12,7 +12,7 @@ function MinorCard({icon, title}: MinorCardProps) {
   return (
     <Container
       style={{
-        shadowColor: theme.colors.shadow[50],
+        shadowColor: theme.colors.gray[90],
         shadowOffset: {
           width: 3,
           height: 3,
