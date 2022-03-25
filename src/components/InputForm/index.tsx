@@ -42,27 +42,24 @@ const InputForm: React.ForwardRefRenderFunction<InputRef, Props> = (
   }));
 
   return (
-    <>
-      <Controller
-        control={control}
-        render={({field: {onChange, value}}) => (
-          <Container isFocused={isFocused} isErrored={!!error}>
-            {icon && <Icon name={icon} />}
-            <Input
-              onFocus={handleInputFocus}
-              onBlur={handleInputBlur}
-              ref={inputElementRef}
-              onChangeText={onChange}
-              value={value}
-              {...rest}
-            />
-          </Container>
-        )}
-        name={name}
-      />
-
-      {error && <Error>{error}</Error>}
-    </>
+    <Controller
+      control={control}
+      render={({field: {onChange, value}}) => (
+        <Container isFocused={isFocused} isErrored={!!error}>
+          {icon && <Icon name={icon} />}
+          <Input
+            icon={icon}
+            onFocus={handleInputFocus}
+            onBlur={handleInputBlur}
+            ref={inputElementRef}
+            onChangeText={onChange}
+            value={value}
+            {...rest}
+          />
+        </Container>
+      )}
+      name={name}
+    />
   );
 };
 

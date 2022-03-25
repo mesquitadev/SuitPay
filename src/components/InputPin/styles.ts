@@ -44,10 +44,10 @@ export const Container = styled.View<Props>`
   padding: 0 14px;
   flex-direction: row;
   align-items: center;
-  background-color: ${({theme}) => theme.colors.background_2};
+  background-color: ${({theme}) => theme.colors.white[100]};
   border-radius: 5px;
   margin-bottom: 8px;
-  border-color: ${({theme}) => theme.colors.text[100]};
+  border-color: ${({theme}) => theme.colors.gray[100]};
   border-width: 1px;
   ${(props: Props) =>
     props.isErrored &&
@@ -74,6 +74,6 @@ export const Error = styled.Text`
   align-self: flex-end;
   font-size: ${RFValue(14)}px;
   font-family: ${({theme}) => theme.fonts.regular};
-  color: ${({theme}) => theme.colors.text[100]};
+  color: ${({theme}) => theme.colors.gray[100]};
   margin: 1px 0;
 `;
