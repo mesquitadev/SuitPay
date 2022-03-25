@@ -30,8 +30,16 @@ function PublicRoutes() {
           backgroundColor: theme.colors.primary,
         },
       }}>
-      <Stack.Screen name="Home" component={HomePage} />
-      <Stack.Screen name="SignIn" component={SignIn} />
+      <Stack.Screen
+        name="Home"
+        component={HomePage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SignIn"
+        component={SignIn}
+        options={{headerShown: false}}
+      />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="RecoverPassword" component={RecoverPassword} />

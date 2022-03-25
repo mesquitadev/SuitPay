@@ -1,56 +1,40 @@
 import {RFValue} from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import logoBlank from '@assets/images/logo-menu.png';
-import {RectButton} from 'react-native-gesture-handler';
 import {Platform} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import theme from '@globals/styles/theme';
+import {getBottomSpace} from 'react-native-iphone-x-helper';
 
 export const Container = styled.KeyboardAvoidingView.attrs({
   enabled: Platform.OS === 'ios',
-  behavior: 'position',
+  behavior: 'height',
   keyboardVerticalOffset: -120,
-})``;
+})`
+  flex: 1;
+  align-items: center;
+`;
 
 export const Gradient = styled(LinearGradient).attrs({
-  locations: [0, 0.5, 0.6],
-  colors: ['#4c669f', '#3b5998', '#192f6a'],
+  colors: ['#0C072D', '#00D19A', '#00D19A'],
+  locations: [0.1, 0.9, 0.9],
+  useAngle: true,
+  angle: 120,
 })`
   flex: 1;
 `;
 
 export const Header = styled.View`
-  width: 100%;
-  height: ${RFValue(80)}px;
-  flex-direction: row;
-  background-color: ${({theme}) => theme.colors.primary};
+  margin-top: 200px;
   align-items: center;
   justify-content: center;
-`;
-
-export const HeaderButtonContainer = styled(RectButton)`
-  justify-content: center;
-  align-items: center;
-  align-self: flex-start;
-  margin-top: ${RFValue(20)}px;
-  margin-left: 10px;
-`;
-
-export const LogoContainer = styled.View`
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-`;
-
-export const BlankContainer = styled.View`
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
 `;
 
 export const Logo = styled.Image.attrs({
   source: logoBlank,
-})``;
+  resizeMode: 'contain',
+})`
+  width: 220px;
+`;
 
 export const Title = styled.Text`
   font-family: ${({theme}) => theme.fonts.medium};
@@ -64,8 +48,31 @@ export const Form = styled.View`
   align-self: stretch;
 `;
 
-export const LinksContainer = styled.View`
-  margin: 10px 0;
+export const CreateAccountButton = styled.TouchableOpacity`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top-width: 0.2px;
+  border-top-color: #fff;
+  padding: 16px 0 ${16 + getBottomSpace()}px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+
+export const CreateAccountButtonText = styled.Text`
+  color: ${({theme}) => theme.colors.gray[100]};
+  font-size: 16px;
+  font-family: ${({theme}) => theme.fonts.regular};
+  margin-left: 16px;
+`;
+
+export const CreateAccountButtonBoldText = styled.Text`
+  color: ${({theme}) => theme.colors.gray[100]};
+  font-size: 16px;
+  font-family: ${({theme}) => theme.fonts.semiBold};
+  margin-left: 16px;
 `;
 
 export const Fields = styled.View``;

@@ -1,25 +1,24 @@
 import React, {useRef} from 'react';
-import {StatusBar} from 'react-native';
 
-import {Button, ButtonLink, InputForm} from '@components/index';
+import {Button, InputForm} from '@components/index';
 import {FieldValues, useForm} from 'react-hook-form';
 import * as Yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {useNavigation} from '@react-navigation/native';
-import theme from '@globals/styles/theme';
 import {useDropDown} from '@hooks/dropdown';
 import {useAuth} from '@hooks/auth';
 import {StackParamList} from '@routes/PublicRoutes';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {
   Container,
+  CreateAccountButton,
+  CreateAccountButtonBoldText,
+  CreateAccountButtonText,
   Fields,
   Form,
   Gradient,
   Header,
-  LinksContainer,
   Logo,
-  Title,
 } from './styles';
 
 type signInScreenProp = NativeStackNavigationProp<StackParamList, 'SignIn'>;
@@ -66,19 +65,17 @@ export default function SignIn() {
 
   return (
     <>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={theme.colors.primary}
-      />
       <Gradient>
         <Container>
+          <Header>
+            <Logo />
+          </Header>
           <Form>
             <Fields>
               <InputForm
                 name="username"
-                icon="at-sign"
                 control={control}
-                placeholder="Usuário"
+                placeholder="usuario"
                 autoCapitalize="none"
                 autoCorrect={false}
                 returnKeyType="next"
@@ -91,36 +88,29 @@ export default function SignIn() {
               <InputForm
                 ref={passwordRef}
                 name="password"
-                icon="key"
                 control={control}
                 secureTextEntry
                 textContentType="password"
-                placeholder="Senha"
+                placeholder="senha"
                 autoCapitalize="none"
                 returnKeyLabel="Entrar"
                 returnKeyType="send"
                 onSubmitEditing={handleSubmit(handleLogin)}
                 error={errors.password && errors.password.message}
               />
-              <LinksContainer>
-                <ButtonLink
-                  title="Esqueci minha senha"
-                  onPress={() => {
-                    navigation.navigate('ForgotPassword');
-                  }}
-                />
-                <ButtonLink
-                  title="Cadastrar"
-                  onPress={() => {
-                    navigation.navigate('SignUp');
-                  }}
-                />
-              </LinksContainer>
+
               <Button title="Entrar" onPress={handleSubmit(handleLogin)} />
             </Fields>
           </Form>
         </Container>
       </Gradient>
+
+      <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
+        <CreateAccountButtonText>
+          Não tem uma conta?{' '}
+          <CreateAccountButtonBoldText>Cadastre-se</CreateAccountButtonBoldText>
+        </CreateAccountButtonText>
+      </CreateAccountButton>
     </>
   );
 }

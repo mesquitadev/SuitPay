@@ -5,7 +5,7 @@ import {Platform} from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${({theme}) => theme.colors.background};
+  background-color: ${({theme}) => theme.colors.gray[40]};
 `;
 
 export const Header = styled.View`
