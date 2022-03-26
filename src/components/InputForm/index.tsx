@@ -7,8 +7,14 @@ import React, {
 } from 'react';
 import {Control, Controller} from 'react-hook-form';
 import {TextInputProps} from 'react-native';
-
-import {Input, Container, Icon, Error} from './styles';
+import {
+  Container,
+  Icon,
+  IconError,
+  Input,
+  TextError,
+  TooltipButton,
+} from './styles';
 
 interface Props extends TextInputProps {
   control: Control;
@@ -56,6 +62,13 @@ const InputForm: React.ForwardRefRenderFunction<InputRef, Props> = (
             value={value}
             {...rest}
           />
+          {error && (
+            <TooltipButton
+              popover={<TextError>{error}</TextError>}
+              actionType="press">
+              <IconError name="alert-circle" />
+            </TooltipButton>
+          )}
         </Container>
       )}
       name={name}

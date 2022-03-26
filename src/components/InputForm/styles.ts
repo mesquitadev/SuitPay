@@ -4,6 +4,7 @@ import {TextInput} from 'react-native';
 import theme from '@globals/styles/theme';
 
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import Tooltip from 'rn-tooltip';
 
 interface Props {
   active?: boolean;
@@ -30,11 +31,10 @@ export const Input = styled(TextInput).attrs({
 export const Container = styled.View<Props>`
   width: 100%;
   height: 45px;
-  padding: 0 14px;
+  padding: 0 30px;
   flex-direction: row;
   align-items: center;
   border-radius: 100px;
-  //background-color: ${({theme}) => theme.colors.white[100]};
   border-width: 1px;
   border-color: ${({theme}) => theme.colors.white[100]};
   margin-bottom: 8px;
@@ -55,14 +55,25 @@ export const Container = styled.View<Props>`
 export const Icon = styled(FeatherIcon).attrs({
   size: 25,
   color: '#00D19A',
+})``;
+
+export const TextError = styled.Text`
+  font-family: ${({theme}) => theme.fonts.medium};
+  color: ${({theme}) => theme.colors.white[100]};
+`;
+
+export const IconError = styled(FeatherIcon).attrs({
+  size: 25,
+  color: '#F55C6C',
+  name: 'alert-circle',
 })`
   margin-right: 10px;
 `;
 
-export const Error = styled.Text`
-  align-self: flex-end;
-  font-size: ${RFValue(14)}px;
-  font-family: ${({theme}) => theme.fonts.bold};
-  color: ${({theme}) => theme.colors.red[50]};
-  margin: 1px 0;
-`;
+export const TooltipButton = styled(Tooltip).attrs({
+  withOverlay: false,
+  actionType: 'press',
+  width: 200,
+  backgroundColor: '#F55C6C',
+  borderWidth: 0.2,
+})``;
