@@ -62,14 +62,14 @@ export const CreateAccountButton = styled.TouchableOpacity`
 `;
 
 export const CreateAccountButtonText = styled.Text`
-  color: ${({theme}) => theme.colors.gray[100]};
+  color: ${({theme}) => theme.colors.white[100]};
   font-size: 16px;
   font-family: ${({theme}) => theme.fonts.regular};
   margin-left: 16px;
 `;
 
 export const CreateAccountButtonBoldText = styled.Text`
-  color: ${({theme}) => theme.colors.gray[100]};
+  color: ${({theme}) => theme.colors.white[100]};
   font-size: 16px;
   font-family: ${({theme}) => theme.fonts.semiBold};
   margin-left: 16px;
