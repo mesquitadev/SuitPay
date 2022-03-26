@@ -3,6 +3,7 @@ import {StatusBar} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import logoMenu from '@assets/images/logo-variant-1.png';
 import theme from '@globals/styles/theme';
+import {useStatusBar} from '@hooks/StatusBar';
 import {
   ButtonsContainer,
   ContainerFull,
@@ -15,6 +16,7 @@ import {
 } from './styles';
 
 function Home() {
+  useStatusBar('dark-content', '#ffffff');
   const navigation = useNavigation<any>();
   const images = [
     require('@assets/images/bg-home.png'),
@@ -27,10 +29,6 @@ function Home() {
   );
   return (
     <ContainerFull source={currentImage}>
-      <StatusBar
-        barStyle="dark-content"
-        backgroundColor={theme.colors.background}
-      />
       <Gradient>
         <LogoContainer>
           <Logo source={logoMenu} />

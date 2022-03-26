@@ -9,6 +9,9 @@ import {useDropDown} from '@hooks/dropdown';
 import {useAuth} from '@hooks/auth';
 import {StackParamList} from '@routes/PublicRoutes';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import theme from '@globals/styles/theme';
+import {StatusBar} from 'react-native';
+import {useStatusBar} from '@hooks/StatusBar';
 import {
   Container,
   CreateAccountButton,
@@ -23,17 +26,18 @@ import {
 
 type signInScreenProp = NativeStackNavigationProp<StackParamList, 'SignIn'>;
 
-interface FormData extends FieldValues {
+type FormData = {
   username: string;
   password: string;
-}
+};
 
 const schema = Yup.object().shape({
-  username: Yup.string().required('Usuário é obrigatório'),
-  password: Yup.string().required('Senha é obrigatória'),
+  username: Yup.string().required('O usuário é obrigatório'),
+  password: Yup.string().required('A senha é obrigatória'),
 });
 
 export default function SignIn() {
+  useStatusBar('light-content', theme.colors.primary);
   const {ref} = useDropDown();
   const passwordRef = useRef(null);
   const navigation = useNavigation<signInScreenProp>();
@@ -45,6 +49,7 @@ export default function SignIn() {
     formState: {errors},
   } = useForm<FormData>({
     resolver: yupResolver(schema),
+    reValidateMode: 'onSubmit',
   });
 
   async function handleLogin(data: FormData) {
