@@ -40,7 +40,11 @@ function PublicRoutes() {
         component={SignIn}
         options={{headerShown: false}}
       />
-      <Stack.Screen name="SignUp" component={SignUp} />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{headerShown: false}}
+      />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="RecoverPassword" component={RecoverPassword} />
     </Stack.Navigator>
