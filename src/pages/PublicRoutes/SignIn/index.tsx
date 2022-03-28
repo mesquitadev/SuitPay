@@ -1,6 +1,11 @@
 import React, {useRef} from 'react';
 
-import {Button, InputForm} from '@components/index';
+import {
+  Button,
+  ImageGradient,
+  InputForm,
+  KeyboardShift,
+} from '@components/index';
 import {FieldValues, useForm} from 'react-hook-form';
 import * as Yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
@@ -38,6 +43,7 @@ const schema = Yup.object().shape({
 
 export default function SignIn() {
   useStatusBar('light-content', theme.colors.primary);
+  const {loading} = useAuth();
   const {ref} = useDropDown();
   const passwordRef = useRef(null);
   const navigation = useNavigation<signInScreenProp>();
@@ -70,46 +76,51 @@ export default function SignIn() {
 
   return (
     <>
-      <Gradient>
-        <Container>
-          <Header>
-            <Logo />
-          </Header>
-          <Form>
-            <Fields>
-              <InputForm
-                name="username"
-                control={control}
-                placeholder="usuario"
-                autoCapitalize="none"
-                autoCorrect={false}
-                returnKeyType="next"
-                onSubmitEditing={() => {
-                  passwordRef.current?.focus();
-                }}
-                error={errors.username && errors.username.message}
-              />
+      <ImageGradient>
+        <KeyboardShift>
+          <Container>
+            <Header>
+              <Logo />
+            </Header>
+            <Form>
+              <Fields>
+                <InputForm
+                  name="username"
+                  control={control}
+                  placeholder="usuario"
+                  autoCapitalize="none"
+                  autoCorrect={false}
+                  returnKeyType="next"
+                  onSubmitEditing={() => {
+                    passwordRef.current?.focus();
+                  }}
+                  error={errors.username && errors.username.message}
+                />
 
-              <InputForm
-                ref={passwordRef}
-                name="password"
-                control={control}
-                secureTextEntry
-                textContentType="password"
-                placeholder="senha"
-                autoCapitalize="none"
-                returnKeyLabel="Entrar"
-                returnKeyType="send"
-                onSubmitEditing={handleSubmit(handleLogin)}
-                error={errors.password && errors.password.message}
-              />
+                <InputForm
+                  ref={passwordRef}
+                  name="password"
+                  control={control}
+                  secureTextEntry
+                  textContentType="password"
+                  placeholder="senha"
+                  autoCapitalize="none"
+                  returnKeyLabel="Entrar"
+                  returnKeyType="send"
+                  onSubmitEditing={handleSubmit(handleLogin)}
+                  error={errors.password && errors.password.message}
+                />
 
-              <Button title="Entrar" onPress={handleSubmit(handleLogin)} />
-            </Fields>
-          </Form>
-        </Container>
-      </Gradient>
-
+                <Button
+                  loading={loading}
+                  title="Entrar"
+                  onPress={handleSubmit(handleLogin)}
+                />
+              </Fields>
+            </Form>
+          </Container>
+        </KeyboardShift>
+      </ImageGradient>
       <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
         <CreateAccountButtonText>
           Não tem uma conta?{' '}

@@ -1,17 +1,13 @@
 import {RFValue} from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
 import logoBlank from '@assets/images/logo-menu.png';
-import {Platform} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {getBottomSpace} from 'react-native-iphone-x-helper';
 
-export const Container = styled.KeyboardAvoidingView.attrs({
-  enabled: Platform.OS === 'ios',
-  behavior: 'height',
-  keyboardVerticalOffset: -120,
-})`
+export const Container = styled.View`
   flex: 1;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Gradient = styled(LinearGradient).attrs({
@@ -24,7 +20,6 @@ export const Gradient = styled(LinearGradient).attrs({
 `;
 
 export const Header = styled.View`
-  margin-top: 200px;
   align-items: center;
   justify-content: center;
 `;
