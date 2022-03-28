@@ -76,4 +76,4 @@ export const TooltipButton = styled(Tooltip).attrs({
   width: 300,
   backgroundColor: '#F55C6C',
   borderWidth: 0.2,
-})`
+})``;
