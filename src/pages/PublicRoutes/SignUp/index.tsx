@@ -1,15 +1,30 @@
 import React, {useRef, useState} from 'react';
-import {Alert, StatusBar} from 'react-native';
-
-import {Button, InputForm} from '@components/index';
+import {
+  Button,
+  CheckBox,
+  ImageGradient,
+  InputForm,
+  KeyboardShift,
+} from '@components/index';
 import {useForm} from 'react-hook-form';
 import * as Yup from 'yup';
 import {yupResolver} from '@hookform/resolvers/yup';
-import theme from '@globals/styles/theme';
-import {useAuth} from '@hooks/auth';
 import api from '@services/api';
 import {useDropDown} from '@hooks/dropdown';
-import {Container, Fields, Form, Header, Paragraph, Title} from './styles';
+import {useStatusBar} from '@hooks/StatusBar';
+import theme from '@globals/styles/theme';
+
+import {
+  BoldText,
+  Check,
+  Container,
+  ContainerConfirm,
+  Fields,
+  Form,
+  Header,
+  Logo,
+  Text,
+} from './styles';
 
 interface FormData {
   username: string;
@@ -18,10 +33,12 @@ interface FormData {
 }
 
 export default function SignUp() {
+  useStatusBar('light-content', theme.colors.primary);
   const {ref} = useDropDown();
   const emailInputRef = useRef(null);
   const passwordRef = useRef(null);
   const passwordRefConfirmation = useRef(null);
+  const [toggleCheckBox, setToggleCheckBox] = useState(false);
   const schema = Yup.object().shape({
     username: Yup.string().required('Usuário é obrigatório'),
     email: Yup.string().required('Email é obrigatório'),
@@ -52,83 +69,94 @@ export default function SignUp() {
     }
   }
 
+  const handleAcceptTerms = () => setToggleCheckBox(state => !state);
+
   return (
-    <Container>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor={theme.colors.primary}
-      />
-      <Header>
-        <Title>Cadastro</Title>
-        <Paragraph>
-          Faça agora seu cadastro na melhor solução de pagamento para sua
-          empresa, marketplace ou negócio online.
-        </Paragraph>
-      </Header>
-      <Form>
-        <Fields>
-          <InputForm
-            name="username"
-            icon="at-sign"
-            control={control}
-            placeholder="Nome de usuário"
-            autoCapitalize="none"
-            autoCorrect={false}
-            returnKeyType="next"
-            onSubmitEditing={() => {
-              emailInputRef.current?.focus();
-            }}
-            error={errors.username && errors.username.message}
-          />
+    <ImageGradient>
+      <KeyboardShift>
+        <Container>
+          <Header>
+            <Logo />
+          </Header>
+          <Form>
+            <Fields>
+              <InputForm
+                name="username"
+                control={control}
+                placeholder="usuário"
+                autoCapitalize="none"
+                autoCorrect={false}
+                returnKeyType="next"
+                onSubmitEditing={() => {
+                  emailInputRef.current?.focus();
+                }}
+                error={errors.username && errors.username.message}
+              />
 
-          <InputForm
-            ref={emailInputRef}
-            name="email"
-            icon="mail"
-            control={control}
-            placeholder="E-mail"
-            autoCapitalize="none"
-            autoCorrect={false}
-            returnKeyType="next"
-            onSubmitEditing={() => {
-              passwordRef.current?.focus();
-            }}
-            error={errors.username && errors.username.message}
-          />
+              <InputForm
+                icon="eye"
+                ref={emailInputRef}
+                name="email"
+                control={control}
+                placeholder="e-mail"
+                autoCapitalize="none"
+                autoCorrect={false}
+                returnKeyType="next"
+                onSubmitEditing={() => {
+                  passwordRef.current?.focus();
+                }}
+                error={errors.email && errors.email.message}
+              />
 
-          <InputForm
-            ref={passwordRef}
-            name="password"
-            icon="key"
-            control={control}
-            placeholder="Senha"
-            autoCapitalize="none"
-            autoCorrect={false}
-            secureTextEntry
-            returnKeyType="next"
-            onSubmitEditing={() => {
-              passwordRefConfirmation.current?.focus();
-            }}
-            error={errors.username && errors.username.message}
-          />
+              <InputForm
+                icon="eye"
+                ref={passwordRef}
+                name="password"
+                control={control}
+                placeholder="senha"
+                autoCapitalize="none"
+                autoCorrect={false}
+                secureTextEntry
+                returnKeyType="next"
+                onSubmitEditing={() => {
+                  passwordRefConfirmation.current?.focus();
+                }}
+                error={errors.password && errors.password.message}
+              />
 
-          <InputForm
-            ref={passwordRefConfirmation}
-            name="passwordConfirmation"
-            icon="key"
-            control={control}
-            secureTextEntry
-            textContentType="password"
-            placeholder="Confirme a Senha"
-            autoCapitalize="none"
-            returnKeyLabel="Cadastrar"
-            error={
-              errors.passwordConfirmation && errors.passwordConfirmation.message
-            }
-          />
-        </Fields>
-        <Button title="Cadastrar" onPress={handleSubmit(handleSave)} />
-      </Form>
-    </Container>
+              <InputForm
+                icon="eye"
+                ref={passwordRefConfirmation}
+                name="passwordConfirmation"
+                control={control}
+                secureTextEntry
+                textContentType="password"
+                placeholder="confirme a Senha"
+                autoCapitalize="none"
+                returnKeyLabel="Cadastrar"
+                error={
+                  errors.passwordConfirmation &&
+                  errors.passwordConfirmation.message
+                }
+              />
+            </Fields>
+            <ContainerConfirm>
+              <CheckBox
+                selected={toggleCheckBox}
+                onPress={() => handleAcceptTerms()}
+                style={undefined}
+                textStyle={undefined}
+              />
+            </ContainerConfirm>
+
+            <Button
+              enabled={toggleCheckBox}
+              title="Cadastrar"
+              onPress={handleSubmit(handleSave)}
+            />
+          </Form>
+        </Container>
+      </KeyboardShift>
+    </ImageGradient>
   );
 }

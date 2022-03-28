@@ -1,41 +1,50 @@
-import {RFValue} from 'react-native-responsive-fontsize';
 import styled from 'styled-components/native';
-import {getStatusBarHeight} from 'react-native-iphone-x-helper';
-import {Platform} from 'react-native';
+import logoBlank from '@assets/images/logo-menu.png';
+import CheckBox from '@react-native-community/checkbox';
 
-export const Container = styled.View`
+export const ContainerFull = styled.ImageBackground`
   flex: 1;
+  align-items: center;
+  justify-content: space-between;
   background-color: ${({theme}) => theme.colors.gray[40]};
 `;
 
+export const Container = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const Header = styled.View`
-  padding-top: ${Platform.OS === 'ios' ? getStatusBarHeight() + 50 : 50}px;
-  width: 100%;
-  height: ${RFValue(250)}px;
-  flex-direction: column;
-  background-color: ${({theme}) => theme.colors.primary};
-  align-items: flex-start;
-  padding-left: 24px;
-  padding-right: 24px;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const Paragraph = styled.Text`
-  font-family: ${({theme}) => theme.fonts.regular};
-  color: ${({theme}) => theme.colors.background_2};
-  font-size: ${RFValue(18)}px;
-`;
-
-export const Title = styled.Text`
-  font-family: ${({theme}) => theme.fonts.bold};
-  color: ${({theme}) => theme.colors.secondary};
-  font-size: ${RFValue(35)}px;
+export const Logo = styled.Image.attrs({
+  source: logoBlank,
+  resizeMode: 'contain',
+})`
+  width: 220px;
 `;
 
 export const Form = styled.View`
-  flex: 1;
-  width: 100%;
   padding: 24px;
+  align-self: stretch;
+`;
+export const Fields = styled.View``;
+
+export const ContainerConfirm = styled.View`
+  flex-direction: row;
+  margin: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
 `;
 
-export const Fields = styled.View``;
+export const Check = styled(CheckBox).attrs({
+  boxType: 'square',
+  onAnimationType: 'fill',
+  onFillColor: '#0C072D',
+})`
+  align-self: flex-start;
+`;
