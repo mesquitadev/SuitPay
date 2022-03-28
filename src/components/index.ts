@@ -4,3 +4,6 @@ export {default as InputPin} from './InputPin';
 export {default as Button} from './Button';
 export {default as ButtonLink} from './ButtonLink';
 export {default as PIcon} from './Icon';
+export {ImageGradient} from './ImageGradient';
+export {KeyboardShift} from './KeyboardShift';
+export {CheckBox} from './Checkbox';
