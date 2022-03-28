@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient';
 import {getBottomSpace, getStatusBarHeight} from 'react-native-iphone-x-helper';
 import {RFValue} from 'react-native-responsive-fontsize';
-import {TouchableOpacityProps, Platform} from 'react-native';
+import {TouchableOpacityProps} from 'react-native';
 
 export const ContainerFull = styled.ImageBackground`
   flex: 1;
@@ -18,6 +18,8 @@ export const Gradient = styled(LinearGradient).attrs({
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding-top: ${15 + getStatusBarHeight()}px;
+  padding-bottom: ${15 + getBottomSpace()}px;
 `;
 
 export const LogoContainer = styled.View``;
@@ -38,10 +40,9 @@ export const SignInButton = styled.TouchableOpacity<ButtonProps>`
   align-items: center;
   background-color: ${props =>
     props.bgColor ? props.bgColor : ({theme}) => theme.colors.primary};
-  border-radius: ${RFValue(6)}px;
+  border-radius: ${RFValue(25)}px;
   margin: 0 6px;
 `;
-
 export const SignUpButton = styled.TouchableOpacity<ButtonProps>`
   width: ${RFValue(150)}px;
   height: ${RFValue(50)}px;
@@ -49,7 +50,7 @@ export const SignUpButton = styled.TouchableOpacity<ButtonProps>`
   align-items: center;
   background-color: ${props =>
     props.bgColor ? props.bgColor : ({theme}) => theme.colors.secondary};
-  border-radius: ${RFValue(6)}px;
+  border-radius: ${RFValue(25)}px;
   margin: 0 6px;
 `;
 
