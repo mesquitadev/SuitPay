@@ -73,7 +73,7 @@ export const IconError = styled(FeatherIcon).attrs({
 export const TooltipButton = styled(Tooltip).attrs({
   withOverlay: false,
   actionType: 'press',
-  width: 200,
+  width: 300,
   backgroundColor: '#F55C6C',
   borderWidth: 0.2,
-})``;
+})`
