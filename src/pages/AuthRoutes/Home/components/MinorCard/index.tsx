@@ -12,16 +12,15 @@ function MinorCard({icon, title}: MinorCardProps) {
   return (
     <Container
       style={{
-        shadowColor: theme.colors.gray[90],
+        shadowColor: theme.colors.black[100],
         shadowOffset: {
-          width: 3,
-          height: 3,
+          width: 0,
+          height: 2,
         },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
-        elevation: 2,
-        backgroundColor: '#ffffff',
-        opacity: 1,
+        shadowOpacity: 0.2,
+        shadowRadius: 4.65,
+
+        elevation: 8,
       }}>
       <ButtonIcon icon={icon} size={30} color="#00D19A" />
       <TextWrapper>

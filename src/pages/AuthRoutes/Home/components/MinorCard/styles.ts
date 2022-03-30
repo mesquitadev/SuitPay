@@ -18,7 +18,7 @@ export const Title = styled.Text`
   font-size: ${RFValue(15)}px;
   color: ${({theme}) => theme.colors.gray[100]};
   font-family: ${({theme}) => theme.fonts.semiBold};
-  line-height: 18px;
+  line-height: 20px;
 `;
 
 export const TextWrapper = styled.View`

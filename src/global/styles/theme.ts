@@ -18,6 +18,7 @@ export default {
     error: '#c53030',
     icon: '#F55C6C',
     black: {
+      '80': '#252422',
       '100': '#000000',
     },
   },

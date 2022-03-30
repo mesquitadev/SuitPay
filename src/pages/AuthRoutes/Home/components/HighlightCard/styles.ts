@@ -5,7 +5,7 @@ import {PIcon} from '@components/index';
 
 export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.white[100]};
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 1);
   border-radius: 10px;
   padding: ${RFValue(10)}px;
   padding-bottom: 20px;

@@ -1,7 +1,5 @@
 import React from 'react';
-
-import theme from '@globals/styles/theme';
-import {Container, TextWrapper, Title, Icon, containerStyles} from './styles';
+import {Container, containerStyles, Icon, TextWrapper, Title} from './styles';
 
 interface FooterProps {
   text: string;
@@ -11,7 +9,7 @@ interface FooterProps {
 function FooterCard({text, iconName}: FooterProps) {
   return (
     <Container style={containerStyles.containerShadow}>
-      <Icon icon={iconName} size={40} />
+      <Icon icon={iconName} size={45} />
       <TextWrapper>
         <Title>{text}</Title>
       </TextWrapper>

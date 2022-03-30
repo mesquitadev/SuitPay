@@ -17,8 +17,8 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: ${RFValue(15)}px;
-  font-family: ${({theme}) => theme.fonts.bold};
-  line-height: 18px;
+  font-family: ${({theme}) => theme.fonts.regular};
+  line-height: 22px;
 `;
 
 export const TextWrapper = styled.View`
@@ -30,15 +30,14 @@ export const Icon = styled(PIcon)``;
 
 export const containerStyles = StyleSheet.create({
   containerShadow: {
-    shadowColor: theme.colors.gray[90],
+    shadowColor: theme.colors.black[100],
     shadowOffset: {
-      width: 3,
-      height: 3,
+      width: 0,
+      height: 2,
     },
-    shadowOpacity: 0.22,
-    shadowRadius: 2.22,
-    elevation: 2,
-    backgroundColor: '#ffffff',
-    opacity: 1,
+    shadowOpacity: 0.2,
+    shadowRadius: 4.65,
+
+    elevation: 8,
   },
 });

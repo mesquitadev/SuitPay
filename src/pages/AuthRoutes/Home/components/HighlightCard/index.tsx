@@ -20,15 +20,15 @@ function HighlightCard() {
   return (
     <Container
       style={{
-        shadowColor: theme.colors.gray[90],
+        shadowColor: theme.colors.black[100],
         shadowOffset: {
-          width: 3,
-          height: 3,
+          width: 0,
+          height: 2,
         },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
-        elevation: 1,
-        opacity: 1,
+        shadowOpacity: 0.2,
+        shadowRadius: 4.65,
+
+        elevation: 8,
       }}>
       <Header>
         <Title>Movimentações</Title>

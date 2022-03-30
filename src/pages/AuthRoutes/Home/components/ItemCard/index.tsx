@@ -1,7 +1,14 @@
 import React from 'react';
 
 import theme from '@globals/styles/theme';
-import {Container, Icon, TextWrapper, Title} from './styles';
+import {
+  BalanceText,
+  IconWrapper,
+  Container,
+  Icon,
+  TextWrapper,
+  Title,
+} from './styles';
 
 interface ItemCardProps {
   title: string;
@@ -13,21 +20,22 @@ function ItemCard({title, icon, value}: ItemCardProps) {
   return (
     <Container
       style={{
-        shadowColor: theme.colors.gray[90],
+        shadowColor: theme.colors.black[100],
         shadowOffset: {
-          width: 3,
-          height: 3,
+          width: 0,
+          height: 2,
         },
-        shadowOpacity: 0.22,
-        shadowRadius: 2.22,
-        elevation: 2,
-        backgroundColor: '#ffffff',
-        opacity: 1,
+        shadowOpacity: 0.2,
+        shadowRadius: 4.65,
+
+        elevation: 8,
       }}>
       <Title>{title}</Title>
       <TextWrapper>
-        <Icon icon={icon} size={34} color="#00D19A" />
-        <Title>{value}</Title>
+        <IconWrapper>
+          <Icon icon={icon} size={30} color="#00D19A" />
+        </IconWrapper>
+        <BalanceText>{value}</BalanceText>
       </TextWrapper>
     </Container>
   );
