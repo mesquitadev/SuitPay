@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Home, Statement} from '@pages/index';
+import {Home, Statement, SuitID} from '@pages/index';
 import {PIcon} from '@components/index';
 import theme from '@globals/styles/theme';
 
@@ -52,11 +52,7 @@ function AuthRoutes() {
         component={Statement}
         options={{headerShown: false}}
       />
-      <Tab.Screen
-        name="SuitID"
-        component={Statement}
-        options={{headerShown: false}}
-      />
+      <Tab.Screen name="SuitID" component={SuitID} />
       <Tab.Screen
         name="Mais"
         component={Statement}
