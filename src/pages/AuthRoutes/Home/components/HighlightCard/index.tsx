@@ -39,14 +39,14 @@ function HighlightCard() {
       </Header>
       <Row>
         <Col>
-          <Icon name="arrow-up" size={29} color="#f55c6c" />
+          <Icon icon="arrow-up" size={29} color="#f55c6c" />
           <SubTitle>Total Entradas</SubTitle>
         </Col>
         <SubTitle>R$ 3.000,00</SubTitle>
       </Row>
       <Row>
         <Col>
-          <Icon name="arrow-down" size={29} color="#08cb33" />
+          <Icon icon="arrow-down" size={29} color="#08cb33" />
           <SubTitle>Total Saidas</SubTitle>
         </Col>
         <SubTitle>R$ 3.000,00</SubTitle>

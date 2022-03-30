@@ -26,7 +26,7 @@ function ItemCard({title, icon, value}: ItemCardProps) {
       }}>
       <Title>{title}</Title>
       <TextWrapper>
-        <Icon name={icon} size={34} color="#00D19A" />
+        <Icon icon={icon} size={34} color="#00D19A" />
         <Title>{value}</Title>
       </TextWrapper>
     </Container>

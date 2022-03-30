@@ -1,7 +1,8 @@
 import styled from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import {PIcon} from '@components/index';
+import {StyleSheet} from 'react-native';
+import theme from '@globals/styles/theme';
 
 export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.white[100]};
@@ -25,4 +26,19 @@ export const TextWrapper = styled.View`
   align-items: center;
 `;
 
-export const ButtonIcon = styled(PIcon)``;
+export const Icon = styled(PIcon)``;
+
+export const containerStyles = StyleSheet.create({
+  containerShadow: {
+    shadowColor: theme.colors.gray[90],
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 2,
+    backgroundColor: '#ffffff',
+    opacity: 1,
+  },
+});

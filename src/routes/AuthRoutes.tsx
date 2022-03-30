@@ -34,7 +34,7 @@ function AuthRoutes() {
               iconName = 'search';
               break;
           }
-          return <PIcon name={iconName} size={20} color={color} />;
+          return <PIcon icon={iconName} size={20} color={color} />;
         },
       })}>
       <Tab.Screen

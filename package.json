@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
-    "@klarna/react-native-vector-drawable": "^0.3.0",
     "@react-native-community/async-storage": "^1.12.1",
     "@react-native-community/checkbox": "^0.5.12",
     "@react-native-community/hooks": "^2.8.1",
@@ -23,6 +22,7 @@
     "axios": "^0.21.1",
     "react": "17.0.2",
     "react-hook-form": "^7.28.0",
+    "react-icomoon": "^2.4.9",
     "react-native": "0.67.2",
     "react-native-dropdownalert": "^4.5.1",
     "react-native-gesture-handler": "2.1.1",
@@ -37,7 +37,6 @@
     "react-native-svg-icon": "^0.10.0",
     "react-native-svg-uri": "^1.2.3",
     "react-native-vector-icons": "^9.1.0",
-    "react-native-vector-image": "^0.3.3",
     "rn-tooltip": "^3.0.1",
     "styled-components": "^5.3.3",
     "yup": "^0.32.11"

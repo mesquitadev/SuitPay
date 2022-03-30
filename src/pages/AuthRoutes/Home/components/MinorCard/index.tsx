@@ -23,7 +23,7 @@ function MinorCard({icon, title}: MinorCardProps) {
         backgroundColor: '#ffffff',
         opacity: 1,
       }}>
-      <ButtonIcon name={icon} size={30} color="#00D19A" />
+      <ButtonIcon icon={icon} size={30} color="#00D19A" />
       <TextWrapper>
         <Title>{title}</Title>
       </TextWrapper>
