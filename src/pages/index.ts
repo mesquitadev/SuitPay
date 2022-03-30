@@ -7,3 +7,4 @@ export {default as RecoverPassword} from './PublicRoutes/RecoverPassword';
 // AuthRoutes
 export {default as Home} from './AuthRoutes/Home';
 export {default as Statement} from './AuthRoutes/Statement';
+export {default as SuitID} from './AuthRoutes/SuitID';
