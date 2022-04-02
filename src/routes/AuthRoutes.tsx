@@ -1,7 +1,7 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Home, Statement, SuitID, Payment} from '@pages/index';
-import {PIcon} from '@components/index';
+import {Header as CHeader, PIcon} from '@components/index';
 import theme from '@globals/styles/theme';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
@@ -12,17 +12,15 @@ export type StackParamList = {
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator<StackParamList>();
 
+function Header({...props}) {
+  return <CHeader {...props} />;
+}
+
 function PaymentRoutes() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerTintColor: '#fff',
-        headerTitleAlign: 'center',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-          fontFamily: theme.fonts.bold,
-          fontSize: 24,
-        },
+        header: props => Header(props),
       }}>
       <Stack.Screen name="Home" component={Payment} />
     </Stack.Navigator>
