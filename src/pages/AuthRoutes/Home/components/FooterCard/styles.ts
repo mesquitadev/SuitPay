@@ -4,7 +4,7 @@ import {PIcon} from '@components/index';
 import {StyleSheet} from 'react-native';
 import theme from '@globals/styles/theme';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   background-color: ${({theme}) => theme.colors.white[100]};
   height: ${RFValue(115)}px;
   width: ${RFValue(115)}px;

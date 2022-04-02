@@ -1,19 +1,18 @@
 import React from 'react';
 import Feather from 'react-native-vector-icons/Feather';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import {RFValue} from 'react-native-responsive-fontsize';
 
 import theme from '@globals/styles/theme';
 import {
+  ButtonTitle,
   ChipButton,
   Col,
-  Icon,
   Container,
   Header,
+  Icon,
   Row,
-  Title,
   SubTitle,
-  ButtonTitle,
+  Title,
 } from './styles';
 
 function HighlightCard() {

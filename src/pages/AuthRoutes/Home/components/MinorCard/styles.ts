@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
 import {RFValue} from 'react-native-responsive-fontsize';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import {PIcon} from '@components/index';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   background-color: ${({theme}) => theme.colors.white[100]};
   height: ${RFValue(85)}px;
   width: ${RFValue(100)}px;
@@ -15,14 +14,13 @@ export const Container = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: ${RFValue(15)}px;
-  color: ${({theme}) => theme.colors.gray[100]};
-  font-family: ${({theme}) => theme.fonts.semiBold};
+  font-size: ${RFValue(14)}px;
+  color: ${({theme}) => theme.colors.black[80]};
+  font-family: ${({theme}) => theme.fonts.regular};
   line-height: 20px;
 `;
 
 export const TextWrapper = styled.View`
-  margin-top: 10px;
   flex-direction: row;
   align-items: center;
 `;

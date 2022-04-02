@@ -6,9 +6,9 @@ interface FooterProps {
   iconName: string;
 }
 
-function FooterCard({text, iconName}: FooterProps) {
+function FooterCard({text, iconName, ...props}: FooterProps) {
   return (
-    <Container style={containerStyles.containerShadow}>
+    <Container style={containerStyles.containerShadow} {...props}>
       <Icon icon={iconName} size={45} />
       <TextWrapper>
         <Title>{text}</Title>

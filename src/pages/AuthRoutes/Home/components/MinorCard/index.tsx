@@ -22,10 +22,10 @@ function MinorCard({icon, title}: MinorCardProps) {
 
         elevation: 8,
       }}>
-      <ButtonIcon icon={icon} size={30} color="#00D19A" />
       <TextWrapper>
         <Title>{title}</Title>
       </TextWrapper>
+      <ButtonIcon icon={icon} size={30} color="#00D19A" />
     </Container>
   );
 }
