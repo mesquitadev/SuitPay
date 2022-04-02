@@ -1,23 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {View} from 'react-native';
 import styled from 'styled-components/native';
 import theme from '@globals/styles/theme';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {useStatusBar} from '@hooks/StatusBar';
 import {useNavigation} from '@react-navigation/native';
-import {
-  BalanceTitle,
-  HideBalance,
-  Icon,
-  Title,
-} from '@pages/AuthRoutes/Home/styles';
-import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
   padding: 0 24px;
+  height: 90px;
 `;
 
 export const Card = styled.View.attrs({})`
@@ -28,6 +21,7 @@ export const Card = styled.View.attrs({})`
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
+  height: 90px;
 `;
 
 export const Text = styled.Text`
@@ -35,13 +29,6 @@ export const Text = styled.Text`
   font-family: ${({theme}) => theme.fonts.regular};
   font-size: ${RFValue(16)}px;
   text-align: center;
-`;
-
-export const ImageBackground = styled.ImageBackground`
-  height: 200px;
-  padding-top: ${getStatusBarHeight() + 29}px;
-  padding-left: 20px;
-  padding-right: 20px;
 `;
 
 export const InfoView = styled.View`
@@ -64,45 +51,29 @@ function Payment() {
   useEffect(() => {
     navigation.setOptions({
       title: 'Pagamento',
-      headerTransparent: true,
     });
   }, [navigation]);
 
   return (
-    <>
-      <ImageBackground
-        resizeMode="cover"
-        source={require('@assets/images/fundo.png')}>
-        <InfoView>
-          <BalanceWrapper>
-            <View>
-              <BalanceTitle>Saldo</BalanceTitle>
-              {show ? <Title>R$ 5.361,00 </Title> : <HideBalance />}
-            </View>
-            <Icon name={show ? 'eye-off' : 'eye'} onPress={handleShowBalance} />
-          </BalanceWrapper>
-        </InfoView>
-      </ImageBackground>
-      <Container>
-        <Card
-          style={{
-            shadowColor: theme.colors.black[100],
-            shadowOffset: {
-              width: 0,
-              height: 2,
-            },
-            shadowOpacity: 0.2,
-            shadowRadius: 4.65,
+    <Container>
+      <Card
+        style={{
+          shadowColor: theme.colors.black[100],
+          shadowOffset: {
+            width: 0,
+            height: 2,
+          },
+          shadowOpacity: 0.2,
+          shadowRadius: 4.65,
 
-            elevation: 8,
-          }}>
-          <Text>
-            Utilize o token abaixo para aprovar ou reprovar as solicitações do
-            Internet Banking na aplicação web SuitPay
-          </Text>
-        </Card>
-      </Container>
-    </>
+          elevation: 8,
+        }}>
+        <Text>
+          Utilize o token abaixo para aprovar ou reprovar as solicitações do
+          Internet Banking na aplicação web SuitPay
+        </Text>
+      </Card>
+    </Container>
   );
 }
 
