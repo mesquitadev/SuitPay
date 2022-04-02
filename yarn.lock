@@ -6101,6 +6101,11 @@ react-native-dropdownalert@^4.5.1:
   dependencies:
     prop-types "15.5.10"
 
+react-native-freeotp@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-freeotp/-/react-native-freeotp-1.0.0.tgz#94d51eaa1c757266a1ec74cda78602dd3d404c7e"
+  integrity sha512-HdePufd0WX9dhCy8QAUvO1yIvPBT5W7Ur00lBRyqO6S5jn7C8O2g/zuIBPupJ2uK8LbpuJHUveq5587oVr7lyg==
+
 react-native-gesture-handler@2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.1.1.tgz#1d417bc7b551ec76129ce09861b3a01622b4ef99"

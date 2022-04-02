@@ -1,18 +1,47 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Home, Statement, SuitID} from '@pages/index';
+import {Home, Statement, SuitID, Payment} from '@pages/index';
 import {PIcon} from '@components/index';
 import theme from '@globals/styles/theme';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+export type StackParamList = {
+  Home: undefined;
+};
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator<StackParamList>();
+
+function PaymentRoutes() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: '#fff',
+        headerTitleAlign: 'center',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontFamily: theme.fonts.bold,
+          fontSize: 24,
+        },
+      }}>
+      <Stack.Screen name="Home" component={Payment} />
+    </Stack.Navigator>
+  );
+}
 
 function AuthRoutes() {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontFamily: theme.fonts.bold,
+          fontSize: 24,
+        },
         tabBarActiveTintColor: theme.colors.secondary,
         inactiveTintColor: '#777',
-        tabBarIcon: ({color, size}) => {
+        tabBarIcon: ({color}) => {
           let iconName;
           switch (route.name) {
             case 'Inicio':
@@ -52,11 +81,29 @@ function AuthRoutes() {
         component={Statement}
         options={{headerShown: false}}
       />
-      <Tab.Screen name="SuitID" component={SuitID} />
+      <Tab.Screen
+        name="SuitID"
+        component={SuitID}
+        options={{
+          headerTransparent: true,
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
       <Tab.Screen
         name="Mais"
         component={Statement}
         options={{headerShown: false}}
+      />
+
+      <Tab.Screen
+        name="PaymentRoutes"
+        component={PaymentRoutes}
+        options={{
+          headerShown: false,
+          tabBarButton: () => null,
+        }}
       />
     </Tab.Navigator>
   );

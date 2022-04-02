@@ -1,13 +1,17 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View} from 'react-native';
 import styled from 'styled-components/native';
-import {CountdownCircleTimer} from 'react-native-countdown-circle-timer';
-import {PIcon} from '@components/index';
 import theme from '@globals/styles/theme';
-import LinearGradient from 'react-native-linear-gradient';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {useStatusBar} from '@hooks/StatusBar';
 import {useNavigation} from '@react-navigation/native';
+import {
+  BalanceTitle,
+  HideBalance,
+  Icon,
+  Title,
+} from '@pages/AuthRoutes/Home/styles';
+import {getStatusBarHeight} from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   flex: 1;
@@ -17,11 +21,10 @@ export const Container = styled.View`
 `;
 
 export const Card = styled.View.attrs({})`
-  height: 100%;
   width: 100%;
   background-color: white;
   position: absolute;
-  top: -77px;
+  top: -35px;
   border-radius: 10px;
   justify-content: space-around;
   align-items: center;
@@ -34,31 +37,52 @@ export const Text = styled.Text`
   text-align: center;
 `;
 
-export const Gradient = styled(LinearGradient)`
-  height: 200px;
-`;
-
 export const ImageBackground = styled.ImageBackground`
   height: 200px;
+  padding-top: ${getStatusBarHeight() + 29}px;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
-function SuitID() {
+export const InfoView = styled.View`
+  flex-direction: row;
+  height: 100%;
+  padding-bottom: 48px;
+`;
+
+export const BalanceWrapper = styled.View`
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: row;
+`;
+
+function Payment() {
   useStatusBar('light-content', '#0C072D');
   const navigation = useNavigation();
+  const [show, setShow] = useState(false);
+  const handleShowBalance = () => setShow(state => !state);
   useEffect(() => {
     navigation.setOptions({
-      title: 'SuitID',
+      title: 'Pagamento',
+      headerTransparent: true,
     });
   }, [navigation]);
 
   return (
     <>
-      <Gradient colors={['#0C072D', '#00D19A']}>
-        <ImageBackground
-          resizeMode="cover"
-          source={require('@assets/images/ssss.png')}
-        />
-      </Gradient>
+      <ImageBackground
+        resizeMode="cover"
+        source={require('@assets/images/fundo.png')}>
+        <InfoView>
+          <BalanceWrapper>
+            <View>
+              <BalanceTitle>Saldo</BalanceTitle>
+              {show ? <Title>R$ 5.361,00 </Title> : <HideBalance />}
+            </View>
+            <Icon name={show ? 'eye-off' : 'eye'} onPress={handleShowBalance} />
+          </BalanceWrapper>
+        </InfoView>
+      </ImageBackground>
       <Container>
         <Card
           style={{
@@ -76,29 +100,10 @@ function SuitID() {
             Utilize o token abaixo para aprovar ou reprovar as solicitações do
             Internet Banking na aplicação web SuitPay
           </Text>
-          <CountdownCircleTimer
-            size={252}
-            isPlaying
-            duration={10}
-            colors="#00D19A"
-            onComplete={() => {
-              return {shouldRepeat: true};
-            }}>
-            {() => (
-              <View
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <PIcon icon="lock-1" size={57} color="#00D19A" />
-                <Text>404912</Text>
-              </View>
-            )}
-          </CountdownCircleTimer>
         </Card>
       </Container>
     </>
   );
 }
 
-export default SuitID;
+export default Payment;
