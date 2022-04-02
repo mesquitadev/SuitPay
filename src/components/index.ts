@@ -7,3 +7,4 @@ export {default as PIcon} from './Icon';
 export {ImageGradient} from './ImageGradient';
 export {KeyboardShift} from './KeyboardShift';
 export {CheckBox} from './Checkbox';
+export {default as Header} from './Header';
