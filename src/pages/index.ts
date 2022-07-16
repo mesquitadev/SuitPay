@@ -9,3 +9,4 @@ export {default as Home} from './AuthRoutes/Home';
 export {default as Statement} from './AuthRoutes/Statement';
 export {default as SuitID} from './AuthRoutes/SuitID';
 export {default as Payment} from './AuthRoutes/Payment';
+export {default as Scanner} from './AuthRoutes/Scanner';

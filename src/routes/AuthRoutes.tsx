@@ -1,12 +1,13 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Home, Statement, SuitID, Payment} from '@pages/index';
+import {Home, Statement, SuitID, Payment, Scanner} from '@pages/index';
 import {Header as CHeader, PIcon} from '@components/index';
 import theme from '@globals/styles/theme';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 export type StackParamList = {
   Home: undefined;
+  Scanner: undefined;
 };
 
 const Tab = createBottomTabNavigator();
@@ -23,6 +24,7 @@ function PaymentRoutes() {
         header: props => Header(props),
       }}>
       <Stack.Screen name="Home" component={Payment} />
+      <Stack.Screen name="Scanner" component={Scanner} />
     </Stack.Navigator>
   );
 }
